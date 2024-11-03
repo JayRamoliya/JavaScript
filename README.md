@@ -146,3 +146,69 @@ console.log(obj.fun);
 obj.age=133
 console.log(obj);
 ```
+
+
+## JavaScript Advance Crash Course_ Level Up Your Coding Skills_ Accelerate Your Front-End Mastery_
+
+1. The Difference ✅
+
+* ES5 (var)
+```javascript
+a='ramoliya' ;   
+console.log('ES5',typeof a,'value:',a );
+// output: ES5 string value: ramoliya
+```
+
+* ES6 (let, const)
+```javascript
+// ES6 (let/const)
+{
+    let b ='ramoliya';
+}   
+console.log("ES6", typeof b," value:",b ) // b is not defined
+// output: ES6 undefined value: undefined
+```
+
+* ES6 (let, const) both are use ES5 AND ES6
+* var is function scoped while let & const are block scoped
+* var adds itself to the window object
+* window search in console
+* let const does not add to the window
+
+2. execution context (is a container where the function's code is executed and it's created whenever a function is called, it contains 3 things, variables, functions and environment.)
+
+3. lexical environment (hota hai ek chart jisme ye likha hota hai ke apka particular function ki cheejo ko access kar sakta hai and kinko nahi, matlab ki it holds it's scope chain)
+
+```javascript
+function abcd(){
+    var a=12;
+    // b not use outside use def() 
+    function def(){
+        var b=13;
+    }
+}
+```
+
+4. How to Copy Reference Values ✅
+
+* ... this is sprad operator
+
+```javascript
+console.log('sprad opetator');
+var obj = {a: 4};
+var copyobj={...obj}
+copyobj.a=7890;
+console.log(obj);
+console.log(copyobj);
+
+var a=[1,2,3,4,5]
+var b=[...a]
+b.pop()
+console.log(a);
+console.log(b);
+```
+
+5. Truthy v/s Falsy (convert value) ✅
+
+* falsy value : false,null,undefiend,NaN (not a number),"", document.all
+* truthy value : true," ",[],{}
